@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the fictional exotic and high-performance inventory at CC Autosports.">
+  <title>Super Sports Cars | CC Autosports</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="CC Autosports home"><span class="brand-mark">CC</span><span class="brand-name">AUTOSPORTS</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="super-sports.html" aria-current="page">Super Sports Cars</a>
+        <a href="compare.html">Compare</a>
+        <a href="test-drive.html" class="nav-cta">Book a Test Drive</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="page-hero super-hero">
+      <div class="container">
+        <p class="eyebrow">CC AUTOSPORTS / ELITE COLLECTION</p>
+        <h1>SUPER SPORTS <em>CARS.</em></h1>
+        <p>Experience the extraordinary. Explore American horsepower, track-focused engineering, and exotic performance.</p>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="supercar-heading">
+      <div class="container">
+        <div class="section-head"><div><p class="eyebrow">THE ELITE LINEUP</p><h2 id="supercar-heading">BEYOND <span>ORDINARY</span></h2></div><p class="section-description">Four incredible machines. One destination.</p></div>
+        <div class="filter-bar">
+          <div class="filter-control"><label for="super-brand-filter">Manufacturer</label><select id="super-brand-filter"><option value="all">All manufacturers</option><option value="Ford">Ford</option><option value="Porsche">Porsche</option><option value="Chevrolet">Chevrolet</option><option value="Lamborghini">Lamborghini</option></select></div>
+          <div class="filter-control"><label for="super-sort-filter">Sort cars</label><select id="super-sort-filter"><option value="featured">Featured order</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="horsepower">Horsepower: highest first</option></select></div>
+          <p id="supercar-count" class="filter-count" role="status" aria-live="polite"></p>
+        </div>
+        <div class="vehicle-grid supercar-grid" id="supercar-vehicles"></div>
+        <p id="super-no-results" class="empty-state" hidden>No vehicles found. Try a different filter.</p>
+        <p class="inventory-disclaimer">All vehicles, years, mileage, prices, and horsepower figures on this site are sample listings for a student project and do not represent actual vehicles for sale.</p>
+      </div>
+    </section>
+    <section class="promo"><div class="container promo-inner"><div><p class="eyebrow">FIND YOUR DREAM CAR</p><h2>TAKE THE NEXT STEP.</h2><p>Choose a super sports car and try our sample test-drive request form.</p></div><a class="button button-white" href="test-drive.html">Request a Test Drive <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><div><a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">AUTOSPORTS</span></a><p>Where performance meets passion.</p></div><p>© <span id="current-year">2026</span> CC Autosports. Student demo website. All vehicle listings are fictional.</p></div></footer>
+</body>
+</html>

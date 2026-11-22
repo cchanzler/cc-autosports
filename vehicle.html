@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore vehicle details and performance specifications at CC Autosports.">
+  <title>Vehicle Details | CC Autosports</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="CC Autosports home"><span class="brand-mark">CC</span><span class="brand-name">AUTOSPORTS</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">☰</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="inventory.html">Inventory</a><a href="super-sports.html">Super Sports Cars</a><a href="compare.html">Compare</a><a href="test-drive.html" class="nav-cta">Book a Test Drive</a></nav>
+  </div></header>
+  <main id="main-content">
+    <section id="vehicle-detail" class="section detail-section">
+      <div class="container">
+        <a id="vehicle-back" class="detail-back" href="inventory.html">← Back to Inventory</a>
+        <div class="detail-heading"><p class="eyebrow" id="vehicle-category"></p><h1 id="vehicle-name">Vehicle Details</h1></div>
+        <div class="detail-main">
+          <div class="detail-photo-wrap"><img id="vehicle-large-photo" src="images/mustang-gt.jpeg" alt="Vehicle exterior"></div>
+          <aside class="detail-purchase" aria-label="Vehicle listing summary">
+            <p class="detail-subheading">LISTED PRICE</p><p id="vehicle-price" class="detail-price"></p>
+            <div class="detail-numbers"><div><span>MILEAGE</span><strong id="vehicle-mileage"></strong></div><div><span>HORSEPOWER</span><strong id="vehicle-horsepower"></strong></div></div>
+            <a class="detail-custom-link" href="#customize">Customize This Vehicle ↓</a>
+            <a class="detail-custom-link" href="#vehicle-history">View History &amp; Condition ↓</a>
+            <a id="vehicle-test-drive" class="button button-red detail-cta" href="test-drive.html">Request a Test Drive →</a>
+            <p class="detail-note">Student demonstration listing. Price, mileage, availability, and vehicle-specific condition are fictional.</p>
+          </aside>
+        </div>
+        <section class="interior-section" aria-labelledby="interior-heading">
+          <div class="interior-heading"><div><p class="eyebrow">TAKE A LOOK INSIDE</p><h2 id="interior-heading">INTERIOR VIEW</h2></div><span class="interior-tag">CABIN &amp; COMFORT</span></div>
+          <div class="interior-layout">
+            <div class="interior-photo-wrap"><img id="vehicle-interior-photo" alt="Vehicle interior" loading="lazy"></div>
+            <div class="interior-description"><h3 id="vehicle-interior-title">Inside the cabin</h3><p id="vehicle-interior-description"></p><p class="detail-note">Interior photo is a model reference image. Colors, trim, equipment, and options may differ from the fictional listing.</p></div>
+          </div>
+        </section>
+        <section class="customizer-section" id="customize" aria-labelledby="customize-heading">
+          <div class="feature-heading"><div><p class="eyebrow">MAKE IT YOURS</p><h2 id="customize-heading">CUSTOMIZE YOUR VEHICLE</h2></div><span class="interior-tag">INTERACTIVE DEMO</span></div>
+          <p class="feature-intro">Try different finishes and upgrades on this vehicle. The drawing is a generic style preview, not a photo or exact representation of the selected model. Options and prices are fictional examples, not available dealership offers.</p>
+          <div class="customizer-layout">
+            <div class="customizer-preview">
+              <div class="preview-stage" id="custom-preview-stage">
+                <svg viewBox="0 0 600 280" class="car-illustration" role="img" aria-label="Generic sports vehicle illustration with configurable body and wheel finishes">
+                  <ellipse cx="300" cy="233" rx="240" ry="21" fill="#001021" opacity=".35"/>
+                  <path d="M80 155 L132 145 195 100 Q214 85 243 85 L378 85 Q410 88 435 111 L491 146 522 153 Q543 160 543 180 L543 205 60 205 60 177 Q61 159 80 155 Z" id="custom-car-body" fill="#c71c32" stroke="#dce7f7" stroke-width="4"/>
+                  <path d="M203 104 L240 98 368 98 Q395 100 417 119 L451 147 147 147 Z" fill="#0d2338" stroke="#8ba4bc" stroke-width="3"/>
+                  <path d="M302 103 L302 145 M170 151 L170 197 M454 151 L454 197" stroke="#91a5bb" stroke-width="3" opacity=".6"/>
+                  <path d="M65 170 L98 165 95 175 65 180 M506 166 L536 174 538 186 509 180" fill="#d9f3ff"/>
+                  <circle cx="163" cy="208" r="42" fill="#0a0e16" stroke="#42576c" stroke-width="4"/>
+                  <circle cx="441" cy="208" r="42" fill="#0a0e16" stroke="#42576c" stroke-width="4"/>
+                  <circle cx="163" cy="208" r="27" class="wheel-finish" fill="#c7d2e2"/><circle cx="441" cy="208" r="27" class="wheel-finish" fill="#c7d2e2"/>
+                  <circle cx="163" cy="208" r="9" fill="#142a42"/><circle cx="441" cy="208" r="9" fill="#142a42"/>
+                </svg>
+              </div>
+              <p class="preview-label">Concept illustration • <span id="custom-preview-name"></span></p>
+              <div class="custom-price"><span>Illustrative configured total</span><strong id="custom-total"></strong></div>
+              <p class="detail-note">This is a visual planning demo. Your selected paint, interior and wheel options are not verified for this make or model and won't change the actual vehicle photos.</p>
+            </div>
+            <div class="customizer-controls">
+              <fieldset class="custom-choice"><legend>Paint finish</legend><div class="swatch-row" id="paint-choices">
+                <label><input type="radio" name="custom-paint" value="red" checked><span class="paint-dot" style="--paint:#bd2137"></span>Red</label>
+                <label><input type="radio" name="custom-paint" value="blue"><span class="paint-dot" style="--paint:#2564bb"></span>Blue</label>
+                <label><input type="radio" name="custom-paint" value="black"><span class="paint-dot" style="--paint:#262b32"></span>Black</label>
+                <label><input type="radio" name="custom-paint" value="white"><span class="paint-dot" style="--paint:#e6ebf0"></span>White</label>
+                <label><input type="radio" name="custom-paint" value="silver"><span class="paint-dot" style="--paint:#8795a8"></span>Silver</label>
+              </div></fieldset>
+              <label class="custom-select-label" for="custom-wheels">Wheel finish<select id="custom-wheels"><option value="standard">Silver finish • Included</option><option value="black">Black finish • +$900</option><option value="bronze">Bronze finish • +$1,200</option></select></label>
+              <label class="custom-select-label" for="custom-interior">Interior theme<select id="custom-interior"><option value="standard">Standard black • Included</option><option value="red">Red accents • +$650</option><option value="tan">Tan accents • +$650</option></select></label>
+              <label class="custom-select-label" for="custom-package">Illustrative accessory bundle<select id="custom-package"><option value="none">No additional package • Included</option><option value="appearance">Appearance package • +$1,500</option><option value="performance">Performance-inspired package • +$3,000</option></select></label>
+              <div class="custom-summary" id="custom-summary" aria-live="polite"></div>
+              <button class="button button-red" type="button" id="custom-reset">Reset Customization</button>
+            </div>
+          </div>
+        </section>
+        <section class="history-section" id="vehicle-history" aria-labelledby="history-heading">
+          <div class="feature-heading"><div><p class="eyebrow">THE FULL PICTURE</p><h2 id="history-heading">VEHICLE HISTORY &amp; CONDITION</h2></div><span class="interior-tag">SAMPLE REPORT</span></div>
+          <p class="feature-intro">This is an invented demonstration report, not a CARFAX, AutoCheck, inspection, title lookup, or real vehicle-history record. No owner, accident, title or service claims have been verified.</p>
+          <div class="history-metrics" id="history-metrics"></div>
+          <div class="history-bottom"><div class="history-card"><h3>Sample condition checklist</h3><ul id="history-checklist"></ul></div><div class="history-card"><h3>Illustrative service timeline</h3><ol id="history-timeline"></ol></div></div>
+        </section>
+        <div class="detail-content">
+          <section class="detail-panel"><p class="eyebrow">BEHIND THE WHEEL</p><h2>ABOUT THIS VEHICLE</h2><p id="vehicle-description"></p><h3>Performance Highlights</h3><ul id="vehicle-highlights" class="detail-highlights"></ul></section>
+          <section class="detail-panel"><p class="eyebrow">KNOW YOUR DRIVE</p><h2>VEHICLE SPECS</h2><dl id="vehicle-specs" class="detail-specs"></dl><p class="detail-note">Engine, transmission, seating, and drivetrain details describe the model or possible configurations, not verified equipment on this fictional listing.</p></section>
+        </div>
+      </div>
+    </section>
+    <section id="vehicle-not-found" class="section" hidden><div class="container"><h1>VEHICLE NOT FOUND</h1><p>We could not find that vehicle in the current inventory.</p><a class="button button-red" href="inventory.html">Browse Inventory</a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><div><a class="brand" href="index.html"><span class="brand-mark">CC</span><span class="brand-name">AUTOSPORTS</span></a><p>Where performance meets passion.</p></div><p>© <span id="current-year">2026</span> CC Autosports. Student demo website. All vehicle listings are fictional.</p></div></footer>
+</body>
+</html>
